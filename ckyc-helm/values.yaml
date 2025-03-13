@@ -1,9 +1,9 @@
-replicaCount: 2  # Number of replicas
+replicaCount: 1  # Number of replicas
 
 image:
-  repository: your-dockerhub-or-ecr-repo/ckyc
-  tag: latest
-  pullPolicy: Always
+  repository: digiotech/digio-ckyc
+  tag: digio_ckyc_v0
+  pullPolicy: IfNotPresent
 
 service:
   type: ClusterIP
@@ -32,4 +32,23 @@ volumes:
 serviceAccount:
   create: false
   name: ""
- 
+
+database:
+  port: 5432
+
+autoscaling:
+  enabled: false  
+  minReplicas: 1
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 80
+
+ingress:
+  enabled: false  # Change to true if using Ingress
+  annotations: {}
+  hosts:
+    - host: ckyc.example.com
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+
