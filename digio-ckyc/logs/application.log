@@ -1,0 +1,1106 @@
+2025-03-13 13:08:42.787 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - Starting AxonApplication v0.0.1-SNAPSHOT using Java 19 with PID 1 (/axon-ckyc.jar started by root in /)
+2025-03-13 13:08:42.793 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 13:08:46.077 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 1423 (http)
+2025-03-13 13:08:46.106 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-1423"]
+2025-03-13 13:08:46.114 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-03-13 13:08:46.115 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-03-13 13:08:46.299 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-03-13 13:08:46.300 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 3418 ms
+2025-03-13 13:08:47.720 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mi.d.axon.config.BouncyCastleConfig[0;39m - BouncyCastle Provider registered successfully.
+2025-03-13 13:08:47.801 [32m[axon-1][0;39m [34m[application][0;39m [31mWARN [0;39m [36mo.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[0;39m - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+2025-03-13 13:08:47.809 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Stopping service [Tomcat]
+2025-03-13 13:08:47.859 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.a.l.ConditionEvaluationReportLogger[0;39m - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-13 13:08:47.899 [32m[axon-1][0;39m [34m[application][0;39m [1;31mERROR[0;39m [36mo.s.boot.SpringApplication[0;39m - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at in.digio.axon.AxonApplication.main(AxonApplication.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64)
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1626)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:309)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1568)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 40 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:222)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:145)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318)
+	... 53 common frames omitted
+Caused by: in.digio.axon.exception.AxonException: CKYC PUBLIC KEY NOT FOUND
+	at in.digio.axon.service.ckyc_service.implementation.client.AxonClient.<init>(AxonClient.java:75)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:209)
+	... 55 common frames omitted
+2025-03-13 13:08:51.641 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - Starting AxonApplication v0.0.1-SNAPSHOT using Java 19 with PID 1 (/axon-ckyc.jar started by root in /)
+2025-03-13 13:08:51.648 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 13:08:54.973 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 1423 (http)
+2025-03-13 13:08:55.003 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-1423"]
+2025-03-13 13:08:55.007 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-03-13 13:08:55.009 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-03-13 13:08:55.167 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-03-13 13:08:55.168 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 3417 ms
+2025-03-13 13:08:56.455 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mi.d.axon.config.BouncyCastleConfig[0;39m - BouncyCastle Provider registered successfully.
+2025-03-13 13:08:56.527 [32m[axon-1][0;39m [34m[application][0;39m [31mWARN [0;39m [36mo.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[0;39m - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+2025-03-13 13:08:56.535 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Stopping service [Tomcat]
+2025-03-13 13:08:56.581 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.a.l.ConditionEvaluationReportLogger[0;39m - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-13 13:08:56.628 [32m[axon-1][0;39m [34m[application][0;39m [1;31mERROR[0;39m [36mo.s.boot.SpringApplication[0;39m - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at in.digio.axon.AxonApplication.main(AxonApplication.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64)
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1626)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:309)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1568)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 40 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:222)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:145)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318)
+	... 53 common frames omitted
+Caused by: in.digio.axon.exception.AxonException: CKYC PUBLIC KEY NOT FOUND
+	at in.digio.axon.service.ckyc_service.implementation.client.AxonClient.<init>(AxonClient.java:75)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:209)
+	... 55 common frames omitted
+2025-03-13 13:09:00.274 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - Starting AxonApplication v0.0.1-SNAPSHOT using Java 19 with PID 1 (/axon-ckyc.jar started by root in /)
+2025-03-13 13:09:00.279 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 13:09:03.566 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 1423 (http)
+2025-03-13 13:09:03.593 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-1423"]
+2025-03-13 13:09:03.600 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-03-13 13:09:03.602 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-03-13 13:09:03.755 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-03-13 13:09:03.756 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 3377 ms
+2025-03-13 13:09:05.197 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mi.d.axon.config.BouncyCastleConfig[0;39m - BouncyCastle Provider registered successfully.
+2025-03-13 13:09:05.268 [32m[axon-1][0;39m [34m[application][0;39m [31mWARN [0;39m [36mo.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[0;39m - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+2025-03-13 13:09:05.280 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Stopping service [Tomcat]
+2025-03-13 13:09:05.330 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.a.l.ConditionEvaluationReportLogger[0;39m - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-13 13:09:05.381 [32m[axon-1][0;39m [34m[application][0;39m [1;31mERROR[0;39m [36mo.s.boot.SpringApplication[0;39m - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at in.digio.axon.AxonApplication.main(AxonApplication.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64)
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1626)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:309)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1568)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 40 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:222)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:145)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318)
+	... 53 common frames omitted
+Caused by: in.digio.axon.exception.AxonException: CKYC PUBLIC KEY NOT FOUND
+	at in.digio.axon.service.ckyc_service.implementation.client.AxonClient.<init>(AxonClient.java:75)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:209)
+	... 55 common frames omitted
+2025-03-13 13:09:09.315 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - Starting AxonApplication v0.0.1-SNAPSHOT using Java 19 with PID 1 (/axon-ckyc.jar started by root in /)
+2025-03-13 13:09:09.321 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 13:09:12.573 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 1423 (http)
+2025-03-13 13:09:12.604 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-1423"]
+2025-03-13 13:09:12.609 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-03-13 13:09:12.610 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-03-13 13:09:12.784 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-03-13 13:09:12.785 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 3356 ms
+2025-03-13 13:09:14.005 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mi.d.axon.config.BouncyCastleConfig[0;39m - BouncyCastle Provider registered successfully.
+2025-03-13 13:09:14.081 [32m[axon-1][0;39m [34m[application][0;39m [31mWARN [0;39m [36mo.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[0;39m - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+2025-03-13 13:09:14.089 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Stopping service [Tomcat]
+2025-03-13 13:09:14.126 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.a.l.ConditionEvaluationReportLogger[0;39m - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-13 13:09:14.163 [32m[axon-1][0;39m [34m[application][0;39m [1;31mERROR[0;39m [36mo.s.boot.SpringApplication[0;39m - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at in.digio.axon.AxonApplication.main(AxonApplication.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64)
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1626)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:309)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1568)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 40 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:222)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:145)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318)
+	... 53 common frames omitted
+Caused by: in.digio.axon.exception.AxonException: CKYC PUBLIC KEY NOT FOUND
+	at in.digio.axon.service.ckyc_service.implementation.client.AxonClient.<init>(AxonClient.java:75)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:209)
+	... 55 common frames omitted
+2025-03-13 13:09:18.400 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - Starting AxonApplication v0.0.1-SNAPSHOT using Java 19 with PID 1 (/axon-ckyc.jar started by root in /)
+2025-03-13 13:09:18.405 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 13:09:21.587 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 1423 (http)
+2025-03-13 13:09:21.621 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-1423"]
+2025-03-13 13:09:21.627 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-03-13 13:09:21.631 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-03-13 13:09:21.804 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-03-13 13:09:21.805 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 3295 ms
+2025-03-13 13:09:23.264 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mi.d.axon.config.BouncyCastleConfig[0;39m - BouncyCastle Provider registered successfully.
+2025-03-13 13:09:23.347 [32m[axon-1][0;39m [34m[application][0;39m [31mWARN [0;39m [36mo.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[0;39m - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+2025-03-13 13:09:23.358 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Stopping service [Tomcat]
+2025-03-13 13:09:23.401 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.a.l.ConditionEvaluationReportLogger[0;39m - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-13 13:09:23.450 [32m[axon-1][0;39m [34m[application][0;39m [1;31mERROR[0;39m [36mo.s.boot.SpringApplication[0;39m - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at in.digio.axon.AxonApplication.main(AxonApplication.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64)
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1626)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:309)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1568)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 40 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:222)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:145)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318)
+	... 53 common frames omitted
+Caused by: in.digio.axon.exception.AxonException: CKYC PUBLIC KEY NOT FOUND
+	at in.digio.axon.service.ckyc_service.implementation.client.AxonClient.<init>(AxonClient.java:75)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:209)
+	... 55 common frames omitted
+2025-03-13 13:09:28.445 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - Starting AxonApplication v0.0.1-SNAPSHOT using Java 19 with PID 1 (/axon-ckyc.jar started by root in /)
+2025-03-13 13:09:28.449 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 13:09:31.651 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 1423 (http)
+2025-03-13 13:09:31.669 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-1423"]
+2025-03-13 13:09:31.672 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-03-13 13:09:31.672 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-03-13 13:09:31.830 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-03-13 13:09:31.832 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 3289 ms
+2025-03-13 13:09:33.268 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mi.d.axon.config.BouncyCastleConfig[0;39m - BouncyCastle Provider registered successfully.
+2025-03-13 13:09:33.338 [32m[axon-1][0;39m [34m[application][0;39m [31mWARN [0;39m [36mo.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[0;39m - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+2025-03-13 13:09:33.345 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Stopping service [Tomcat]
+2025-03-13 13:09:33.399 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.a.l.ConditionEvaluationReportLogger[0;39m - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-13 13:09:33.437 [32m[axon-1][0;39m [34m[application][0;39m [1;31mERROR[0;39m [36mo.s.boot.SpringApplication[0;39m - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at in.digio.axon.AxonApplication.main(AxonApplication.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64)
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1626)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:309)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1568)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 40 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:222)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:145)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318)
+	... 53 common frames omitted
+Caused by: in.digio.axon.exception.AxonException: CKYC PUBLIC KEY NOT FOUND
+	at in.digio.axon.service.ckyc_service.implementation.client.AxonClient.<init>(AxonClient.java:75)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:209)
+	... 55 common frames omitted
+2025-03-13 13:09:40.247 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - Starting AxonApplication v0.0.1-SNAPSHOT using Java 19 with PID 1 (/axon-ckyc.jar started by root in /)
+2025-03-13 13:09:40.251 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 13:09:43.458 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 1423 (http)
+2025-03-13 13:09:43.483 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-1423"]
+2025-03-13 13:09:43.489 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-03-13 13:09:43.490 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-03-13 13:09:43.681 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-03-13 13:09:43.683 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 3322 ms
+2025-03-13 13:09:45.100 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mi.d.axon.config.BouncyCastleConfig[0;39m - BouncyCastle Provider registered successfully.
+2025-03-13 13:09:45.163 [32m[axon-1][0;39m [34m[application][0;39m [31mWARN [0;39m [36mo.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[0;39m - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+2025-03-13 13:09:45.169 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Stopping service [Tomcat]
+2025-03-13 13:09:45.209 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.a.l.ConditionEvaluationReportLogger[0;39m - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-13 13:09:45.255 [32m[axon-1][0;39m [34m[application][0;39m [1;31mERROR[0;39m [36mo.s.boot.SpringApplication[0;39m - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at in.digio.axon.AxonApplication.main(AxonApplication.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64)
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1626)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:309)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1568)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 40 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:222)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:145)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318)
+	... 53 common frames omitted
+Caused by: in.digio.axon.exception.AxonException: CKYC PUBLIC KEY NOT FOUND
+	at in.digio.axon.service.ckyc_service.implementation.client.AxonClient.<init>(AxonClient.java:75)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:209)
+	... 55 common frames omitted
+2025-03-13 13:09:55.086 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - Starting AxonApplication v0.0.1-SNAPSHOT using Java 19 with PID 1 (/axon-ckyc.jar started by root in /)
+2025-03-13 13:09:55.094 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 13:09:58.177 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 1423 (http)
+2025-03-13 13:09:58.205 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-1423"]
+2025-03-13 13:09:58.211 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-03-13 13:09:58.211 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-03-13 13:09:58.396 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-03-13 13:09:58.399 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 3201 ms
+2025-03-13 13:09:59.699 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mi.d.axon.config.BouncyCastleConfig[0;39m - BouncyCastle Provider registered successfully.
+2025-03-13 13:09:59.771 [32m[axon-1][0;39m [34m[application][0;39m [31mWARN [0;39m [36mo.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[0;39m - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+2025-03-13 13:09:59.779 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Stopping service [Tomcat]
+2025-03-13 13:09:59.820 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.a.l.ConditionEvaluationReportLogger[0;39m - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-13 13:09:59.871 [32m[axon-1][0;39m [34m[application][0;39m [1;31mERROR[0;39m [36mo.s.boot.SpringApplication[0;39m - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at in.digio.axon.AxonApplication.main(AxonApplication.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64)
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1626)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:309)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1568)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 40 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:222)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:145)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318)
+	... 53 common frames omitted
+Caused by: in.digio.axon.exception.AxonException: CKYC PUBLIC KEY NOT FOUND
+	at in.digio.axon.service.ckyc_service.implementation.client.AxonClient.<init>(AxonClient.java:75)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:209)
+	... 55 common frames omitted
+2025-03-13 13:10:16.193 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - Starting AxonApplication v0.0.1-SNAPSHOT using Java 19 with PID 1 (/axon-ckyc.jar started by root in /)
+2025-03-13 13:10:16.197 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 13:10:19.455 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 1423 (http)
+2025-03-13 13:10:19.483 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-1423"]
+2025-03-13 13:10:19.489 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-03-13 13:10:19.492 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-03-13 13:10:19.664 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-03-13 13:10:19.668 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 3376 ms
+2025-03-13 13:10:21.119 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mi.d.axon.config.BouncyCastleConfig[0;39m - BouncyCastle Provider registered successfully.
+2025-03-13 13:10:21.191 [32m[axon-1][0;39m [34m[application][0;39m [31mWARN [0;39m [36mo.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[0;39m - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+2025-03-13 13:10:21.197 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Stopping service [Tomcat]
+2025-03-13 13:10:21.242 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.a.l.ConditionEvaluationReportLogger[0;39m - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-13 13:10:21.290 [32m[axon-1][0;39m [34m[application][0;39m [1;31mERROR[0;39m [36mo.s.boot.SpringApplication[0;39m - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at in.digio.axon.AxonApplication.main(AxonApplication.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64)
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1626)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:309)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1568)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 40 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:222)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:145)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318)
+	... 53 common frames omitted
+Caused by: in.digio.axon.exception.AxonException: CKYC PUBLIC KEY NOT FOUND
+	at in.digio.axon.service.ckyc_service.implementation.client.AxonClient.<init>(AxonClient.java:75)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:209)
+	... 55 common frames omitted
+2025-03-13 13:10:50.367 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - Starting AxonApplication v0.0.1-SNAPSHOT using Java 19 with PID 1 (/axon-ckyc.jar started by root in /)
+2025-03-13 13:10:50.374 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 13:10:53.608 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 1423 (http)
+2025-03-13 13:10:53.623 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-1423"]
+2025-03-13 13:10:53.626 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-03-13 13:10:53.627 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-03-13 13:10:53.780 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-03-13 13:10:53.781 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 3310 ms
+2025-03-13 13:10:55.232 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mi.d.axon.config.BouncyCastleConfig[0;39m - BouncyCastle Provider registered successfully.
+2025-03-13 13:10:55.310 [32m[axon-1][0;39m [34m[application][0;39m [31mWARN [0;39m [36mo.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[0;39m - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+2025-03-13 13:10:55.316 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Stopping service [Tomcat]
+2025-03-13 13:10:55.364 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.a.l.ConditionEvaluationReportLogger[0;39m - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-13 13:10:55.403 [32m[axon-1][0;39m [34m[application][0;39m [1;31mERROR[0;39m [36mo.s.boot.SpringApplication[0;39m - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at in.digio.axon.AxonApplication.main(AxonApplication.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64)
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1626)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:309)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1568)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 40 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:222)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:145)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318)
+	... 53 common frames omitted
+Caused by: in.digio.axon.exception.AxonException: CKYC PUBLIC KEY NOT FOUND
+	at in.digio.axon.service.ckyc_service.implementation.client.AxonClient.<init>(AxonClient.java:75)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:209)
+	... 55 common frames omitted
+2025-03-13 13:11:50.155 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - Starting AxonApplication v0.0.1-SNAPSHOT using Java 19 with PID 1 (/axon-ckyc.jar started by root in /)
+2025-03-13 13:11:50.160 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 13:11:53.436 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 1423 (http)
+2025-03-13 13:11:53.466 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-1423"]
+2025-03-13 13:11:53.469 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-03-13 13:11:53.469 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-03-13 13:11:53.627 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-03-13 13:11:53.629 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 3359 ms
+2025-03-13 13:11:54.966 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mi.d.axon.config.BouncyCastleConfig[0;39m - BouncyCastle Provider registered successfully.
+2025-03-13 13:11:55.057 [32m[axon-1][0;39m [34m[application][0;39m [31mWARN [0;39m [36mo.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[0;39m - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+2025-03-13 13:11:55.064 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Stopping service [Tomcat]
+2025-03-13 13:11:55.107 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.a.l.ConditionEvaluationReportLogger[0;39m - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-13 13:11:55.135 [32m[axon-1][0;39m [34m[application][0;39m [1;31mERROR[0;39m [36mo.s.boot.SpringApplication[0;39m - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at in.digio.axon.AxonApplication.main(AxonApplication.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64)
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1626)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:309)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1568)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 40 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:222)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:145)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318)
+	... 53 common frames omitted
+Caused by: in.digio.axon.exception.AxonException: CKYC PUBLIC KEY NOT FOUND
+	at in.digio.axon.service.ckyc_service.implementation.client.AxonClient.<init>(AxonClient.java:75)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:209)
+	... 55 common frames omitted
+2025-03-13 13:12:58.615 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - Starting AxonApplication v0.0.1-SNAPSHOT using Java 19 with PID 1 (/axon-ckyc.jar started by root in /)
+2025-03-13 13:12:58.620 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 13:13:01.942 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 1423 (http)
+2025-03-13 13:13:01.969 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-1423"]
+2025-03-13 13:13:01.972 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-03-13 13:13:01.974 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-03-13 13:13:02.129 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-03-13 13:13:02.131 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 3405 ms
+2025-03-13 13:13:03.533 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mi.d.axon.config.BouncyCastleConfig[0;39m - BouncyCastle Provider registered successfully.
+2025-03-13 13:13:03.601 [32m[axon-1][0;39m [34m[application][0;39m [31mWARN [0;39m [36mo.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext[0;39m - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+2025-03-13 13:13:03.606 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Stopping service [Tomcat]
+2025-03-13 13:13:03.651 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.a.l.ConditionEvaluationReportLogger[0;39m - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-13 13:13:03.698 [32m[axon-1][0;39m [34m[application][0;39m [1;31mERROR[0;39m [36mo.s.boot.SpringApplication[0;39m - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'axonController' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/controller/AxonController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at in.digio.axon.AxonApplication.main(AxonApplication.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:102)
+	at org.springframework.boot.loader.launch.Launcher.launch(Launcher.java:64)
+	at org.springframework.boot.loader.launch.JarLauncher.main(JarLauncher.java:40)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ckycService' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/CkycService.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1626)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'axonClient' defined in URL [jar:nested:/axon-ckyc.jar/!BOOT-INF/classes/!/in/digio/axon/service/ckyc_service/implementation/client/AxonClient.class]: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:309)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1371)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1208)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:288)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1568)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 40 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [in.digio.axon.service.ckyc_service.implementation.client.AxonClient]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:222)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:145)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318)
+	... 53 common frames omitted
+Caused by: in.digio.axon.exception.AxonException: CKYC PUBLIC KEY NOT FOUND
+	at in.digio.axon.service.ckyc_service.implementation.client.AxonClient.<init>(AxonClient.java:75)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:209)
+	... 55 common frames omitted
+2025-03-13 13:14:07.216 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - Starting AxonApplication v0.0.1-SNAPSHOT using Java 19 with PID 1 (/axon-ckyc.jar started by root in /)
+2025-03-13 13:14:07.220 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 13:14:10.494 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 1423 (http)
+2025-03-13 13:14:10.520 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-1423"]
+2025-03-13 13:14:10.526 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-03-13 13:14:10.527 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-03-13 13:14:10.680 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-03-13 13:14:10.681 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 3356 ms
+2025-03-13 13:14:12.046 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mi.d.axon.config.BouncyCastleConfig[0;39m - BouncyCastle Provider registered successfully.
+2025-03-13 13:14:12.734 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mi.d.a.s.c.i.client.AxonClient[0;39m - Initializing ckyc client!
+2025-03-13 13:14:12.735 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mi.d.a.s.c.i.client.AxonClient[0;39m - Successfully initialized ckyc client!
+2025-03-13 13:14:14.422 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.a.e.web.EndpointLinksResolver[0;39m - Exposing 15 endpoints beneath base path '/actuator'
+2025-03-13 13:14:14.589 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-1423"]
+2025-03-13 13:14:14.648 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 1423 (http) with context path '/'
+2025-03-13 13:14:14.678 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - Started AxonApplication in 9.155 seconds (process running for 10.48)
+2025-03-13 13:14:41.074 [32m[default][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-13 13:14:41.075 [32m[default][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Initializing Servlet 'dispatcherServlet'
+2025-03-13 13:14:41.080 [32m[default][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.web.servlet.DispatcherServlet[0;39m - Completed initialization in 4 ms
+2025-03-13 13:53:28.027 [32m[default][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-13 13:53:28.369 [32m[default][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.e.tomcat.GracefulShutdown[0;39m - Graceful shutdown complete
+2025-03-13 13:53:44.334 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - Starting AxonApplication v0.0.1-SNAPSHOT using Java 19 with PID 1 (/axon-ckyc.jar started by root in /)
+2025-03-13 13:53:44.338 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 13:53:51.680 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 1423 (http)
+2025-03-13 13:53:51.724 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-1423"]
+2025-03-13 13:53:51.731 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-03-13 13:53:51.735 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-03-13 13:53:52.078 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-03-13 13:53:52.082 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 7589 ms
+2025-03-13 13:53:55.299 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mi.d.axon.config.BouncyCastleConfig[0;39m - BouncyCastle Provider registered successfully.
+2025-03-13 13:53:56.808 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mi.d.a.s.c.i.client.AxonClient[0;39m - Initializing ckyc client!
+2025-03-13 13:53:56.814 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mi.d.a.s.c.i.client.AxonClient[0;39m - Successfully initialized ckyc client!
+2025-03-13 13:54:00.225 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.a.e.web.EndpointLinksResolver[0;39m - Exposing 15 endpoints beneath base path '/actuator'
+2025-03-13 13:54:00.753 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-1423"]
+2025-03-13 13:54:00.932 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 1423 (http) with context path '/'
+2025-03-13 13:54:01.043 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - Started AxonApplication in 18.842 seconds (process running for 21.123)
+2025-03-13 14:20:49.114 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - Starting AxonApplication v0.0.1-SNAPSHOT using Java 19 with PID 1 (/axon-ckyc.jar started by root in /)
+2025-03-13 14:20:49.125 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - No active profile set, falling back to 1 default profile: "default"
+2025-03-13 14:20:56.796 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat initialized with port 1423 (http)
+2025-03-13 14:20:56.845 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Initializing ProtocolHandler ["http-nio-1423"]
+2025-03-13 14:20:56.854 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardService[0;39m - Starting service [Tomcat]
+2025-03-13 14:20:56.855 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.catalina.core.StandardEngine[0;39m - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-03-13 14:20:57.273 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/][0;39m - Initializing Spring embedded WebApplicationContext
+2025-03-13 14:20:57.280 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.s.c.ServletWebServerApplicationContext[0;39m - Root WebApplicationContext: initialization completed in 7926 ms
+2025-03-13 14:21:00.304 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mi.d.axon.config.BouncyCastleConfig[0;39m - BouncyCastle Provider registered successfully.
+2025-03-13 14:21:01.843 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mi.d.a.s.c.i.client.AxonClient[0;39m - Initializing ckyc client!
+2025-03-13 14:21:01.862 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mi.d.a.s.c.i.client.AxonClient[0;39m - Successfully initialized ckyc client!
+2025-03-13 14:21:05.498 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.a.e.web.EndpointLinksResolver[0;39m - Exposing 15 endpoints beneath base path '/actuator'
+2025-03-13 14:21:06.006 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.a.coyote.http11.Http11NioProtocol[0;39m - Starting ProtocolHandler ["http-nio-1423"]
+2025-03-13 14:21:06.515 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36mo.s.b.w.e.tomcat.TomcatWebServer[0;39m - Tomcat started on port 1423 (http) with context path '/'
+2025-03-13 14:21:06.860 [32m[axon-1][0;39m [34m[application][0;39m [34mINFO [0;39m [36min.digio.axon.AxonApplication[0;39m - Started AxonApplication in 21.541 seconds (process running for 25.923)

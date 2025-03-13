@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  digio-ckyc:
+    image: digiotech/digio-ckyc:digio_ckyc_v0
+    container_name: ckyc-service
+    ports:
+      - "1423:1423"
+    environment:
+      - TZ=Asia/Calcutta
+    volumes:
+      - ./ckyc-properties.yml:/app/ckyc-properties.yml
+      - ./ckyc-keys:/app/ckyc-keys
+      - ./logs:/app/logs
+    restart: unless-stopped
+

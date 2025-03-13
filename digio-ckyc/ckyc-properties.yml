@@ -1,0 +1,11 @@
+ckyc-config:
+  fi-code: YOUR_FI_CODE
+  ckyc-public-key: /app/ckyc-keys/CersaiSignPublicKey.cer
+  digio-env: PROD
+  keystore:
+    keystore-configuration:
+      key-alias: mykey
+      keystore-password: 979436
+      keystore-path: /app/ckyc-keys/mykeystore.jks
+      signature-method: http://www.w3.org/2000/09/xmldsig#rsa-sha1
+

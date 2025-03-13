@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-deployment
+  labels:
+    app: {{ .Release.Name }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: ckyc-container
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          ports:
+            - containerPort: 8080
+          env:
+            - name: FI_CODE
+              value: "{{ .Values.ckycConfig.fiCode }}"
+            - name: DIGIO_ENV
+              value: "{{ .Values.ckycConfig.digioEnv }}"
+            - name: KEYSTORE_ALIAS
+              value: "{{ .Values.keystore.keyAlias }}"
+            - name: KEYSTORE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: ckyc-secret
+                  key: keystore-password
+          volumeMounts:
+            - name: ckyc-keys
+              mountPath: /app/ckyc-keys
+      volumes:
+        - name: ckyc-keys
+          configMap:
+            name: ckyc-config
+

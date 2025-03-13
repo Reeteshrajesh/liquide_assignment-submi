@@ -1,0 +1,35 @@
+replicaCount: 2  # Number of replicas
+
+image:
+  repository: your-dockerhub-or-ecr-repo/ckyc
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  port: 8080
+
+ckycConfig:
+  fiCode: YOUR_FI_CODE
+  digioEnv: PROD
+  publicKeyPath: /app/ckyc-keys/CersaiSignPublicKey.cer
+
+keystore:
+  keyAlias: mykeys
+  keystorePassword: 979436
+  keystorePath: /app/ckyc-keys/mykeystore.jks
+  signatureMethod: http://www.w3.org/2000/09/xmldsig#rsa-sha1
+
+volumeMounts:
+  - name: ckyc-keys
+    mountPath: /app/ckyc-keys
+
+volumes:
+  - name: ckyc-keys
+    configMap:
+      name: ckyc-config
+
+serviceAccount:
+  create: false
+  name: ""
+ 
