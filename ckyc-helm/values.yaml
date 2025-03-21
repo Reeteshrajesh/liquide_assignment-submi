@@ -15,7 +15,7 @@ ckycConfig:
   publicKeyPath: "/app/ckyc-keys/CersaiSignPublicKey.cer"
 
 keystore:
-  encodedKeystore: "BASE64_ENCODED_STRING_HERE"  # Replace with actual base64 content
+  encodedKeystore: "BASE64_ENCODED_STRING_HERE"  # Replace with actual base64 content -- base64 mykeystore.jks | tr -d '\n'
   keyAlias: "my-alias"
   password: "979436"
   keystorePath: "/app/keystore/mykeystore.jks"
