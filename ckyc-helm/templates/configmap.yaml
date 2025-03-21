@@ -6,7 +6,7 @@ data:
   FI_CODE: "{{ .Values.ckycConfig.fiCode }}"
   DIGIO_ENV: "{{ .Values.ckycConfig.digioEnv }}"
   PUBLIC_KEY_PATH: "/app/ckyc-keys/CersaiSignPublicKey.cer"
-  KEYSTORE_PATH: "/app/ckyc-keys/mykeystore.jks"
+  KEYSTORE_PATH: "/app/keystore/mykeystore.jks"
   SIGNATURE_METHOD: "{{ .Values.keystore.signatureMethod }}"
   CersaiSignPublicKey.cer: |
     {{ .Files.Get "digio-ckyc/ckyc-keys/CersaiSignPublicKey.cer" | indent 4 }}
