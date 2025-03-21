@@ -21,21 +21,35 @@ spec:
             - containerPort: 8080
           env:
             - name: FI_CODE
-              value: "{{ .Values.ckycConfig.fiCode }}"
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: FI_CODE
             - name: DIGIO_ENV
-              value: "{{ .Values.ckycConfig.digioEnv }}"
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: DIGIO_ENV
             - name: KEYSTORE_ALIAS
-              value: "{{ .Values.keystore.keyAlias }}"
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: KEYSTORE_ALIAS
             - name: KEYSTORE_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: ckyc-secret
+                  name: {{ .Release.Name }}-keystore
                   key: keystore-password
           volumeMounts:
             - name: ckyc-keys
               mountPath: /app/ckyc-keys
+            - name: ckyc-keystore
+              mountPath: /app/keystore
+              subPath: mykeystore.jks
       volumes:
         - name: ckyc-keys
           configMap:
-            name: ckyc-config
-
+            name: {{ .Release.Name }}-config
+        - name: ckyc-keystore
+          secret:
+            secretName: {{ .Release.Name }}-keystore
