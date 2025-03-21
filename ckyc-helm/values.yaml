@@ -10,24 +10,31 @@ service:
   port: 8080
 
 ckycConfig:
-  fiCode: YOUR_FI_CODE
-  digioEnv: PROD
-  publicKeyPath: /app/ckyc-keys/CersaiSignPublicKey.cer
+  fiCode: "YOUR_FI_CODE"
+  digioEnv: "PROD"
+  publicKeyPath: "/app/ckyc-keys/CersaiSignPublicKey.cer"
 
 keystore:
-  keyAlias: mykeys
-  keystorePassword: 979436
-  keystorePath: /app/ckyc-keys/mykeystore.jks
-  signatureMethod: http://www.w3.org/2000/09/xmldsig#rsa-sha1
+  encodedKeystore: "BASE64_ENCODED_STRING_HERE"  # Replace with actual base64-encoded keystore.jks
+  keyAlias: "my-alias"
+  password: "979436"
+  keystorePath: "/app/keystore/mykeystore.jks"
+  signatureMethod: "http://www.w3.org/2000/09/xmldsig#rsa-sha1"
 
 volumeMounts:
   - name: ckyc-keys
     mountPath: /app/ckyc-keys
+  - name: ckyc-keystore
+    mountPath: /app/keystore
+    subPath: mykeystore.jks
 
 volumes:
   - name: ckyc-keys
     configMap:
-      name: ckyc-config
+      name: "{{ .Release.Name }}-config"
+  - name: ckyc-keystore
+    secret:
+      secretName: "{{ .Release.Name }}-keystore"
 
 serviceAccount:
   create: false
@@ -51,4 +58,3 @@ ingress:
         - path: /
           pathType: ImplementationSpecific
   tls: []
-
