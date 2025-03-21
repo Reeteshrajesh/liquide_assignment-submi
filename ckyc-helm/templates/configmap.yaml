@@ -3,10 +3,5 @@ kind: ConfigMap
 metadata:
   name: ckyc-config
 data:
-  ckyc_public_key.pem: |
-    -----BEGIN PUBLIC KEY-----
-    YOUR_PUBLIC_KEY_HERE
-    -----END PUBLIC KEY-----
-  your_keystore.jks: |
-    BASE64_ENCODED_KEYSTORE_FILE
-
+  CersaiSignPublicKey.cer: |
+    {{ .Values.certificate.cersaiPublicKey | nindent 4 }}
