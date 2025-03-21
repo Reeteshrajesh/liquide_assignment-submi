@@ -1,7 +1,11 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: ckyc-config
+  name: {{ .Release.Name }}-config
 data:
-  CersaiSignPublicKey.cer: |
-    {{ .Values.certificate.cersaiPublicKey | nindent 4 }}
+  FI_CODE: "{{ .Values.ckycConfig.fiCode }}"
+  DIGIO_ENV: "{{ .Values.ckycConfig.digioEnv }}"
+  PUBLIC_KEY_PATH: "{{ .Values.ckycConfig.publicKeyPath }}"
+  KEYSTORE_PATH: "{{ .Values.keystore.keystorePath }}"
+  SIGNATURE_METHOD: "{{ .Values.keystore.signatureMethod }}"
+
