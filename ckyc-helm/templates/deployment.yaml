@@ -25,14 +25,20 @@ spec:
             - name: KEYSTORE_ALIAS
               value: "{{ .Values.keystore.keyAlias }}"
             - name: KEYSTORE_PASSWORD
-              value: "{{ .Values.keystore.password }}"
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-keystore
+                  key: keystore-password
           volumeMounts:
             - name: ckyc-keys
               mountPath: /app/ckyc-keys
+            - name: keystore-volume
+              mountPath: /app/keystore
+              subPath: mykeystore.jks
       volumes:
         - name: ckyc-keys
           configMap:
-            name: ckyc-config
+            name: {{ .Release.Name }}-config
         - name: keystore-volume
           secret:
-            secretName: ckyc-secret
+            secretName: {{ .Release.Name }}-keystore
